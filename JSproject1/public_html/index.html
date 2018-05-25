@@ -22,7 +22,7 @@
 
   <div id="login">
 
-    <form id="loginform" class="form-vertical no-padding no-margin" action="./main.html">
+    <form id="loginform" class="form-vertical no-padding no-margin" >
       <div class="lock">
           <i class="icon-lock"></i>
       </div>
@@ -55,7 +55,7 @@
           </div>
       </div>
 
-      <input type="submit" id="login-btn" class="btn btn-block login-btn" value="Login" />
+      <input type="submit" id="login-btn" class="btn btn-block login-btn" value="Login" onclick="f()"/>
     </form>
     <!-- END LOGIN FORM -->   
 
@@ -67,9 +67,42 @@
   </div>
   <!-- END COPYRIGHT -->
    <script>
-   $('.icon-key i').click(function(){
-    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-   });
+function f(){
+    
+  //action="./main.html";
+  //alert("test");
+  //window.open ('http://localhost:8383/JSproject1/main.html','_self',true);
+ // window.location.href = www.google.com; 
+// window.open("https://www.google.com","app","resizable=yes");
+
+var tabUsers =["AMR","HAMID","MARC"];
+var tabPass =["1111","2222","3333"];
+var bool = false ;
+//alert();
+
+for(var i = 0 ;i < tabUsers.length;i++){
+    
+   var user = document.getElementById("input-username").value.toUpperCase();
+   var pass = document.getElementById("input-password").value;
+
+    
+    if ((user === tabUsers[i])&&  pass === tabPass[i]){
+    
+       document.getElementsByTagName("BODY")[0].innerHTML = window.open ('./main.html','_self');
+       bool = true ;
+ 
+    
+}
+}
+    if(bool == false){
+        
+        alert("login Faild ");
+    }
+
+
+    
+}
+   
 </script>
 </body>
 </html>
