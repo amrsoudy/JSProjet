@@ -1,8 +1,8 @@
 {
-    "name": "JSproject1",
+    "name": "TestProjet",
     "version": "1.0.0",
     "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "1795162",
+    "author": "marca",
     "contributors": [],
     "dependencies": {}
 }
